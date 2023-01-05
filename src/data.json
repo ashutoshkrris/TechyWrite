@@ -1,5 +1,21 @@
 [
   {
+    "name": "Medium",
+    "type": "Publication",
+    "link": "https://medium.com/creators",
+    "categories": [
+      "Ideas",
+      "Politics",
+      "Tech",
+      "Entrepreneurship",
+      "Life",
+      "Culture",
+      "Education"
+    ],
+    "hourlyMaxRate": "25",
+    "description": "Medium is a social publishing platform that is open to all and home to a diverse array of stories, ideas, and perspectives."
+  },
+  {
     "name": "CSS Tricks",
     "type": "Publication",
     "link": "https://css-tricks.com/guest-writing-for-css-tricks/?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.vercel.app",
