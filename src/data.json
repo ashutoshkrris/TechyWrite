@@ -1,5 +1,13 @@
 [
   {
+    "name": "dev.to",
+    "type": "Publication",
+    "link": "https://dev.to/chrisachard/how-to-write-your-first-post-on-dev-c3k",
+    "categories": ["Open Source"],
+    "contact": "yo@dev.to",
+    "description": "DEV is an online platform where programmers of all backgrounds and experience levels gather to publish articles, participate in discussions, and discover products and services."
+  },
+  {
     "name": "CSS Tricks",
     "type": "Publication",
     "link": "https://css-tricks.com/guest-writing-for-css-tricks/?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.vercel.app",
