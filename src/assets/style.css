@@ -1,0 +1,176 @@
+@import "./base.css";
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms linear;
+}
+
+#search-bar {
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.scroll-top {
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.toggle {
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.opportunity {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.opportunity-name {
+  font-size: 1.2rem;
+}
+
+.opportunity-type {
+  padding: 0.5rem;
+  position: absolute;
+  color: black;
+  background-color: white;
+  top: 35px;
+  right: 18px;
+}
+
+.opportunity-category {
+  right: 10px;
+  bottom: 10px;
+  word-break: break-word;
+  margin-top: 10px;
+  justify-content: flex-end;
+  margin-right: -8px;
+}
+
+.icon {
+  color: #8589f4;
+  margin-right: 10px;
+}
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pagination {
+  background: rgb(31 41 55 / var(--tw-bg-opacity));
+  margin: 0px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  border: none;
+  box-sizing: border-box;
+  overflow: hidden;
+  word-wrap: break-word;
+  align-content: center;
+  border-radius: 0.5rem;
+}
+
+.page-item {
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 0px;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.page-link {
+  color: white;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+.page-link:hover {
+  color: #333333;
+  background-color: #e9e9e9;
+  border: none;
+}
+
+.active-page {
+  background-color: rgb(21 128 61 / var(--tw-bg-opacity)) !important;
+  color: white !important;
+}
+.active-page:hover {
+  border: none;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+.disabled .page-link {
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    animation: none;
+  }
+
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+
+  /* .opportunity-category {
+    position: static;
+    right: 10px;
+    bottom: 10px;
+    word-break: break-word;
+    margin-top: 10px;
+  } */
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}

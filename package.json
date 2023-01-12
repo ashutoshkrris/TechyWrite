@@ -1,0 +1,19 @@
+{
+  "name": "techywrite-website",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/source-filesystem": "^0.6.2",
+    "gridsome": "^0.7.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "gridsome-plugin-tailwindcss2": "^3.0.1",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.4"
+  }
+}
