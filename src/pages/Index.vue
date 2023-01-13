@@ -51,10 +51,10 @@ export default {
         property: "og:url",
         content: "https://techywrite.vercel.app",
       },
-      { property: "og:title", content: "Guest Writings 📝 - Ashutosh Krishna" },
+      { property: "og:title", content: "Home - TechyWrite" },
       {
         property: "twitter:title",
-        content: "Guest Writings 📝 - Ashutosh Krishna",
+        content: "Home - TechyWrite",
       },
       {
         property: "twitter:url",
