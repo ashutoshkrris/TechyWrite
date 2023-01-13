@@ -12,6 +12,26 @@ import Footer from "../components/Footer.vue";
       <!-- Header -->
       <Header />
 
+      <div class="flex pl-4 pr-4">
+        <div class="w-1/2 text-left text-white mt-2">
+          Displaying
+          <span class="bg-green-100 text-black px-2 rounded ml-2 mr-2">{{
+            $page.opportunities.totalCount
+          }}</span>
+          Opportunities
+        </div>
+        <div class="w-1/2 text-right">
+          <a href="/new-source"
+            ><button
+              type="button"
+              class="bg-green-800 text-white rounded p-2 focus:outline-none focus:ring focus:ring-psybeam/80 hover:bg-green-900 mb-3 w-1/3"
+            >
+              Suggest a Source
+            </button></a
+          >
+        </div>
+      </div>
+
       <!-- Opportunities -->
       <ul class="gap-4 mx-auto mb-2">
         <li
