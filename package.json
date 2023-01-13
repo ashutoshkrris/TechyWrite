@@ -9,6 +9,8 @@
   "dependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
+    "axios": "^1.2.2",
+    "body-parser": "^1.20.1",
     "gridsome": "^0.7.0"
   },
   "devDependencies": {
