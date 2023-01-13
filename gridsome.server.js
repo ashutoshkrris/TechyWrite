@@ -5,12 +5,23 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-module.exports = function (api) {
-  api.loadSource(({ addCollection }) => {
+module.exports = function(api) {
+  api.loadSource(async (actions) => {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
-  })
+
+    // Fetching opportunities from src/data/opportunities.json
+    const opportunities = require("./src/data/opportunities.json");
+
+    const opportunitiesCollection = actions.addCollection({
+      typeName: "Opportunities",
+    });
+
+    for (const opportunity of opportunities) {
+      opportunitiesCollection.addNode(opportunity);
+    }
+  });
 
   api.createPages(({ createPage }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/
-  })
-}
+  });
+};

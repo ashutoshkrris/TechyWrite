@@ -1,33 +1,43 @@
+<script setup>
+import ScrollToTop from "../components/ScrollToTop.vue";
+import Header from "../components/Header.vue";
+</script>
+
 <template>
   <Layout>
-
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
-
-    <h1>Hello, world!</h1>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
-
-    <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
-
+    <ScrollToTop />
+    <section class="max-w-6xl p-4 mx-auto">
+      <Header />
+    </section>
   </Layout>
 </template>
 
 <script>
 export default {
   metaInfo: {
-    title: 'Hello, world!'
-  }
-}
+    title: "Hello, world!",
+  },
+};
 </script>
 
-<style>
-.home-links a {
-  margin-right: 1rem;
+<page-query>
+query {
+  opportunities: allOpportunities {
+    edges {
+      node {
+        name
+        type
+        link
+        categories
+        minRate
+        maxRate
+        description
+        contact
+        royaltyRate
+        hourlyMaxRate
+      }
+    }
+    totalCount
+  }
 }
-</style>
+</page-query>
