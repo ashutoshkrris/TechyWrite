@@ -16,7 +16,7 @@
             <a href="/"
               ><button
                 type="button"
-                class="bg-green-800 text-white rounded p-2 focus:outline-none focus:ring focus:ring-psybeam/80 hover:bg-green-900 mb-3 w-1/3"
+                class="bg-green-800 text-white rounded p-2 focus:outline-none focus:ring focus:ring-psybeam/80 hover:bg-green-900 text-sm mt-3"
               >
                 Home
               </button></a
