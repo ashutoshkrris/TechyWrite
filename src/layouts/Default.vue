@@ -4,10 +4,50 @@
   </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
+<script>
+export default {
+  metaInfo: {
+    meta: [
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        name: "description",
+        content:
+          "TechyWrite is a place where you can find available paid writing opportunities for technical writers.",
+      },
+      {
+        name: "keywords",
+        content:
+          "TechyWrite, Technical Writing, Paid Technical Writing, Technical Writing Opportunities, Technical Writing Jobs, Technical Writing Internships, Technical Writing Freelance, Technical Writing Remote, Technical Writing Remote Jobs, Technical Writing Remote Internships, Technical Writing Remote Freelance, Technical Writing Remote Opportunities, Technical Writing Paid Opportunities, Technical Writing Paid Jobs, Technical Writing Paid Internships, Technical Writing Paid Freelance, Technical Writing Paid Remote, Technical Writing Paid Remote Jobs, Technical Writing Paid Remote Internships, Technical Writing Paid Remote Freelance, Technical Writing Paid Remote Opportunities",
+      },
+      {
+        property: "og:url",
+        content: "https://techywrite.vercel.app",
+      },
+      { property: "og:title", content: "Guest Writings 📝 - Ashutosh Krishna" },
+      {
+        property: "og:description",
+        content:
+          "TechyWrite is a place where you can find available paid writing opportunities for technical writers.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://i.imgur.com/xSOfwDU.png" },
+      { property: "twitter:card", content: "summary_large_image" },
+      { property: "twitter:image", content: "https://i.imgur.com/xSOfwDU.png" },
+      {
+        property: "twitter:title",
+        content: "Guest Writings 📝 - Ashutosh Krishna",
+      },
+      {
+        property: "twitter:url",
+        content: "https://techywrite.vercel.app",
+      },
+      {
+        property: "twitter:description",
+        content:
+          "TechyWrite is a place where you can find available paid writing opportunities for technical writers.",
+      },
+    ],
+  },
+};
+</script>

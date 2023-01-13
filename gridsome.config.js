@@ -5,7 +5,9 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: "Gridsome",
+  siteName: "TechyWrite",
+  siteUrl: "https://techywrite.vercel.app",
+  icon: "./src/favicon.png",
   plugins: [
     {
       use: "gridsome-plugin-tailwindcss2",

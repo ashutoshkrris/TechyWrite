@@ -45,7 +45,22 @@ import Opportunity from "../components/Opportunity.vue";
 import { Pager } from "gridsome";
 export default {
   metaInfo: {
-    title: "Hello, world!",
+    title: "Home",
+    meta: [
+      {
+        property: "og:url",
+        content: "https://techywrite.vercel.app",
+      },
+      { property: "og:title", content: "Guest Writings 📝 - Ashutosh Krishna" },
+      {
+        property: "twitter:title",
+        content: "Guest Writings 📝 - Ashutosh Krishna",
+      },
+      {
+        property: "twitter:url",
+        content: "https://techywrite.vercel.app",
+      },
+    ],
   },
   components: {
     Pager,
