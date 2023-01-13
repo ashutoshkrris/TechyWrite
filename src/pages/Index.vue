@@ -6,15 +6,31 @@ import Footer from "../components/Footer.vue";
 
 <template>
   <Layout>
+    <!-- Scroll to top button -->
     <ScrollToTop />
     <section class="max-w-6xl p-4 mx-auto">
+      <!-- Header -->
       <Header />
+
+      <!-- Opportunities -->
+      <ul class="gap-4 mx-auto mb-2">
+        <li
+          v-for="opportunity in $page.opportunities.edges"
+          :key="opportunity.node.id"
+          class="p-3 w-full h-full"
+        >
+          <Opportunity :opportunity="opportunity" />
+        </li>
+      </ul>
+
+      <!-- Footer -->
       <Footer />
     </section>
   </Layout>
 </template>
 
 <script>
+import Opportunity from "../components/Opportunity.vue";
 export default {
   metaInfo: {
     title: "Hello, world!",
@@ -24,7 +40,7 @@ export default {
 
 <page-query>
 query {
-  opportunities: allOpportunities {
+  opportunities: allOpportunities(sortBy: "name", order: ASC) {
     edges {
       node {
         name

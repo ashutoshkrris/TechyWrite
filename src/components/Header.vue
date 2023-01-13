@@ -19,14 +19,6 @@
   </div>
 </template>
 
-<page-query>
-query {
-  opportunities: allOpportunities {
-    totalCount
-  }
-}
-</page-query>
-
 <script>
 import GitHubSVG from "../assets/githubsvg.svg";
 export default {

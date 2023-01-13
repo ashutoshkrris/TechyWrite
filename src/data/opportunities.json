@@ -458,7 +458,7 @@
     "link": "https://wizardondemand.com?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.vercel.app",
     "categories": ["Infrastructure", "Full-Stack Development", "Data Science"],
     "contact": "workwithus@wizardondemand.com",
-    "hourlyMaxRate": 15,
+    "hourlyMaxRate": "15",
     "description": "Connect and collaborate with other writers, get detailed feedback from our editors, and learn from our subject matter experts."
   },
   {
