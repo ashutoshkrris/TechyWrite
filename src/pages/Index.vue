@@ -23,6 +23,17 @@ import Footer from "../components/Footer.vue";
         </li>
       </ul>
 
+      <!-- Pager -->
+      <div class="pagination-container">
+        <Pager
+          :info="$page.opportunities.pageInfo"
+          class="pagination"
+          :linkClass="'page-link'"
+          :exactActiveLinkClass="'active-page'"
+          :range="3"
+        />
+      </div>
+
       <!-- Footer -->
       <Footer />
     </section>
@@ -31,16 +42,24 @@ import Footer from "../components/Footer.vue";
 
 <script>
 import Opportunity from "../components/Opportunity.vue";
+import { Pager } from "gridsome";
 export default {
   metaInfo: {
     title: "Hello, world!",
+  },
+  components: {
+    Pager,
   },
 };
 </script>
 
 <page-query>
-query {
-  opportunities: allOpportunities(sortBy: "name", order: ASC) {
+query ($page: Int) {
+  opportunities: allOpportunities(sortBy: "name", order: ASC, perPage: 10, page: $page) @paginate {
+    pageInfo {
+      totalPages
+      currentPage
+    }
     edges {
       node {
         name
