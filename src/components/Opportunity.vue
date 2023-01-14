@@ -79,7 +79,14 @@
         <h3
           class="text-white"
           style="margin-top: 3px"
-          v-if="opportunity.node.hourlyMaxRate"
+          v-if="opportunity.node.hourlyMinRate && opportunity.node.hourlyMaxRate"
+        >
+          ${{ opportunity.node.hourlyMinRate }} - ${{ opportunity.node.hourlyMaxRate }} per hour
+        </h3>
+        <h3
+          class="text-white"
+          style="margin-top: 3px"
+          v-if="!opportunity.node.hourlyMinRate && opportunity.node.hourlyMaxRate"
         >
           ${{ opportunity.node.hourlyMaxRate }} per hour
         </h3>

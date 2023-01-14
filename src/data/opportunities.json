@@ -458,7 +458,7 @@
     "link": "https://wizardondemand.com?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.vercel.app",
     "categories": ["Infrastructure", "Full-Stack Development", "Data Science"],
     "contact": "workwithus@wizardondemand.com",
-    "hourlyMaxRate": "15",
+    "hourlyMaxRate": 15,
     "description": "Connect and collaborate with other writers, get detailed feedback from our editors, and learn from our subject matter experts."
   },
   {
@@ -936,7 +936,8 @@
     "name": "Astrix Technology LLC",
     "link": "https://www.ziprecruiter.com/c/AstrixTechnology-LLC/Job/Technical-Writer/-in-Redmond,WA?jid=2a49dbf6c3a44a95&lvk=07OWIPZhK5EtxcLgosArSA.--MfK71sSPN?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.vercel.app",
     "type": "Agency",
-    "hourlyMaxRate": "30 - 40",
+    "hourlyMinRate": 30,
+    "hourlyMaxRate": 40,
     "description": "Requires prior experience and will provide training prior to joining",
     "categories": ["Science", "Biotech", "Pharmaceutical"]
   },
@@ -968,5 +969,45 @@
     "minRate": "100",
     "maxRate": "200",
     "description": "Novu is a constantly growing open-source platform that is built by developers for developers. By writing for Novu, not only can you get more attention to your content but also make some money on the side. It’s a win-win!"
+  },
+  {
+    "name": "Nyckel",
+    "type": "publication",
+    "link": "https://www.nyckel.com/blog/",
+    "contact": "writers@nyckel.com",
+    "categories": ["Machine Learning", "Data Science"],
+    "maxRate": 400,
+    "description": "Looking for thought leadership content, interesting ML-driven sample apps and built with Nyckel, and integrations. "
+  },
+  {
+    "name": "Ant Media",
+    "type": "publication",
+    "link": "https://antmedia.io/write-for-us-looking-for-technical-authors/",
+    "categories": ["Infrastructure", "APIs"],
+    "minRate": 50,
+    "maxRate": 150
+  },
+  {
+    "name": "Open Relay",
+    "type": "publication",
+    "link": "https://medium.com/stackanatomy/write-for-us-ad11489bd7c3",
+    "categories": ["Front-End Development"],
+    "maxRate": 250
+  },
+  {
+    "name": "Storyblok",
+    "type": "publication",
+    "link": "https://www.storyblok.com/tp/guest-writing-terms",
+    "categories": ["Front-End Development", "Infrastructure"],
+    "maxRate": 200
+  },
+  {
+    "name": "Dolby.io",
+    "type": "publication",
+    "link": "https://go.dolby.io/community-writing",
+    "categories": ["Full-Stack Development", "APIs"],
+    "minRate": 100,
+    "maxRate": 500,
+    "description": "Articles must use one or more Dolby.io technologies."
   }
 ]

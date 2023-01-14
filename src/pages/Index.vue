@@ -106,6 +106,7 @@ query ($page: Int) {
         description
         contact
         royaltyRate
+        hourlyMinRate
         hourlyMaxRate
       }
     }

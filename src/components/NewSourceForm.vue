@@ -79,23 +79,7 @@
         </p>
       </div>
       <br />
-      <div class="text-white">
-        <label>Rate Type</label> <br />
-        <select
-          v-model="selectedRateType"
-          class="px-4 py-2 mt-2 mb-4 bg-gray-800 text-gray-300 outline-none rounded w-full -mr-[4.5rem] focus:ring focus:ring-psybeam/80"
-          required
-        >
-          <option v-for="option in rateTypes" :value="option">{{
-            option
-          }}</option>
-        </select>
-        <p class="text-sm text-gray-500">
-          All the rates must be in USD($).
-        </p>
-      </div>
-      <br />
-      <div v-if="selectedRateType === 'Minimum - Maximum Range'">
+      <div v-if="formData.companyType === 'Publication'">
         <div class="flex">
           <div class="text-white w-1/2 mr-4">
             <label>Minimum Rate</label><br />
@@ -119,7 +103,7 @@
         </p>
         <br />
       </div>
-      <div v-else-if="selectedRateType === 'Royalty Rate'">
+      <div v-else-if="formData.companyType === 'Publisher'">
         <div class="text-white">
           <label for=""> Royalty Rate<br /></label>
           <input
@@ -132,17 +116,27 @@
         <br />
       </div>
       <div v-else>
-        <div class="text-white">
-          <label>Hourly Maximum Rate</label><br />
-          <input
-            v-model="formData.hourlyMaxRate"
-            class="px-4 py-2 mt-2 mb-4 bg-gray-800 text-gray-300 outline-none rounded w-full -mr-[4.5rem] focus:ring focus:ring-psybeam/80"
-            required
-          />
-          <p class="text-sm text-gray-500">
-            Please do not include the USD($) symbol.
-          </p>
+        <div class="flex">
+          <div class="text-white w-1/2 mr-4">
+            <label>Hourly Minimum Rate</label><br />
+            <input
+              v-model="formData.hourlyMinRate"
+              class="px-4 py-2 mt-2 mb-4 bg-gray-800 text-gray-300 outline-none rounded w-full -mr-[4.5rem] focus:ring focus:ring-psybeam/80"
+            />
+          </div>
+          <br />
+          <div class="text-white w-1/2">
+            <label>Hourly Maximum Rate</label> <br />
+            <input
+              v-model="formData.hourlyMaxRate"
+              class="px-4 py-2 mt-2 mb-4 bg-gray-800 text-gray-300 outline-none rounded w-full -mr-[4.5rem] focus:ring focus:ring-psybeam/80"
+            />
+          </div>
+          <br />
         </div>
+        <p class="text-sm text-gray-500">
+          Please do not include the USD($) symbol.
+        </p>
         <br />
       </div>
       <div class="text-white">
@@ -183,15 +177,10 @@ export default {
         minRate: "",
         maxRate: "",
         royaltyRate: "",
+        hourlyMinRate: "",
         hourlyMaxRate: "",
       },
       companyTypes: ["Publication", "Publisher", "Agency"],
-      rateTypes: [
-        "Minimum - Maximum Range",
-        "Hourly Maximum Rate",
-        "Royalty Rate",
-      ],
-      selectedRateType: "Minimum - Maximum Range",
     };
   },
   computed: {
@@ -199,6 +188,7 @@ export default {
       return (
         this.formData.minRate ||
         this.formData.maxRate ||
+        this.formData.hourlyMinRate ||
         this.formData.hourlyMaxRate ||
         this.formData.royaltyRate
       );
@@ -218,7 +208,7 @@ export default {
           obj[key] = value;
           return obj;
         }, {});
-        
+
       const data = {
         formData: this.formData,
       };
@@ -235,9 +225,9 @@ export default {
           minRate: "",
           maxRate: "",
           royaltyRate: "",
+          hourlyMinRate: "",
           hourlyMaxRate: "",
         };
-        this.selectedRateType = "Minimum - Maximum Range";
       } else alert(`Something went wrong: ${response}`);
     },
   },
