@@ -10,7 +10,7 @@ import Footer from "../components/Footer.vue";
     <ScrollToTop />
     <section class="max-w-6xl p-4 mx-auto">
       <!-- Header -->
-      <Header :totalCount="opportunities.length"/>
+      <Header :totalCount="filteredOpportunities.length" />
 
       <div class="flex md:flex-row flex-col px-1.5 py-4">
         <!-- Filtering -->
@@ -70,7 +70,7 @@ import Footer from "../components/Footer.vue";
       <!-- Opportunities -->
       <ul class="gap-4 mx-auto mb-2">
         <li
-          v-for="opportunity in opportunities.slice(
+          v-for="opportunity in filteredOpportunities.slice(
             (page - 1) * pageSize,
             page * pageSize
           )"
@@ -82,7 +82,7 @@ import Footer from "../components/Footer.vue";
       </ul>
 
       <!-- Pagination -->
-      <Pagination :opportunities="opportunities" @page="getPage" />
+      <Pagination :opportunities="filteredOpportunities" @page="getPage" />
 
       <!-- Footer -->
       <Footer />
@@ -115,6 +115,7 @@ export default {
   },
   data() {
     return {
+      opportunities: opportunities,
       selectedCompanyType: "All Resources",
       companyTypes: ["All Resources", "Publication", "Publisher", "Agency"],
       selectedSorting: "A-Z",
@@ -126,6 +127,18 @@ export default {
   methods: {
     getPage(value) {
       this.page = value;
+    },
+  },
+  computed: {
+    filteredOpportunities() {
+      if (
+        !this.selectedCompanyType ||
+        this.selectedCompanyType === "All Resources"
+      )
+        return this.opportunities;
+      return this.opportunities.filter(
+        (opportunity) => opportunity.type.toLowerCase() === this.selectedCompanyType.toLowerCase()
+      );
     },
   },
 };
