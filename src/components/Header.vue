@@ -48,7 +48,7 @@
       <div class="w-1/2 text-left text-white mt-1">
         Displaying
         <span class="bg-green-100 text-black px-2 rounded ml-2 mr-2">{{
-          $page.opportunities.totalCount
+          totalCount
         }}</span>
         opportunities
       </div>
@@ -74,6 +74,12 @@ export default {
     return {
       GitHubSVG,
     };
+  },
+  props: {
+    totalCount: {
+      type: Number,
+      default: 0,
+    },
   },
 };
 </script>

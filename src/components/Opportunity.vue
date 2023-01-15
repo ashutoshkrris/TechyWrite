@@ -7,7 +7,7 @@
       <h2
         class="flex rounded-2xl opportunity-type text-xs font-semibold mr-4 px-2.5 py-0.5 dark:bg-green-700 dark:text-green-100 rounded-lg"
       >
-        {{ opportunity.node.type }}
+        {{ opportunity.type }}
       </h2>
       <div
         class="flex items-center mb-3 justify"
@@ -15,49 +15,49 @@
       >
         <a
           class="text-2xl font-semibold text-white"
-          :href="opportunity.node.link"
+          :href="opportunity.link"
           target="_blank"
           rel="noopener"
-          >{{ opportunity.node.name }}</a
+          >{{ opportunity.name }}</a
         >
       </div>
       <div
         class="flex justify-start mb-2 mt-4"
-        v-if="opportunity.node.description"
+        v-if="opportunity.description"
       >
         <em class="bi bi-info-circle me-3 icon"></em>
         <h3 class="text-white" style="margin-top: 3px">
-          {{ opportunity.node.description }}
+          {{ opportunity.description }}
         </h3>
       </div>
 
-      <div class="flex justify-start mb-2" v-if="opportunity.node.contact">
+      <div class="flex justify-start mb-2" v-if="opportunity.contact">
         <em class="bi bi-envelope me-3 icon"></em>
-        <a :href="'mailto:' + opportunity.node.contact"
+        <a :href="'mailto:' + opportunity.contact"
           ><h3
             class="text-white"
             style="margin-top: 3px; word-break: break-all"
           >
-            {{ opportunity.node.contact }}
+            {{ opportunity.contact }}
           </h3></a
         >
       </div>
 
       <hr
         v-if="
-          (opportunity.node.description || opportunity.node.contact) &&
-            (opportunity.node.maxRate ||
-              opportunity.node.hourlyMaxRate ||
-              opportunity.node.royaltyRate)
+          (opportunity.description || opportunity.contact) &&
+            (opportunity.maxRate ||
+              opportunity.hourlyMaxRate ||
+              opportunity.royaltyRate)
         "
         style="margin-bottom: 5px"
       />
 
       <div
         v-if="
-          opportunity.node.maxRate ||
-            opportunity.node.hourlyMaxRate ||
-            opportunity.node.royaltyRate
+          opportunity.maxRate ||
+            opportunity.hourlyMaxRate ||
+            opportunity.royaltyRate
         "
         class="flex justify-start mb-2"
       >
@@ -65,41 +65,41 @@
         <h3
           class="text-white"
           style="margin-top: 3px"
-          v-if="opportunity.node.minRate && opportunity.node.maxRate"
+          v-if="opportunity.minRate && opportunity.maxRate"
         >
-          ${{ opportunity.node.minRate }} - ${{ opportunity.node.maxRate }}
+          ${{ opportunity.minRate }} - ${{ opportunity.maxRate }}
         </h3>
         <h3
           class="text-white"
           style="margin-top: 3px"
-          v-if="!opportunity.node.minRate && opportunity.node.maxRate"
+          v-if="!opportunity.minRate && opportunity.maxRate"
         >
-          ${{ opportunity.node.maxRate }}
+          ${{ opportunity.maxRate }}
         </h3>
         <h3
           class="text-white"
           style="margin-top: 3px"
-          v-if="opportunity.node.hourlyMinRate && opportunity.node.hourlyMaxRate"
+          v-if="opportunity.hourlyMinRate && opportunity.hourlyMaxRate"
         >
-          ${{ opportunity.node.hourlyMinRate }} - ${{ opportunity.node.hourlyMaxRate }} per hour
+          ${{ opportunity.hourlyMinRate }} - ${{ opportunity.hourlyMaxRate }} per hour
         </h3>
         <h3
           class="text-white"
           style="margin-top: 3px"
-          v-if="!opportunity.node.hourlyMinRate && opportunity.node.hourlyMaxRate"
+          v-if="!opportunity.hourlyMinRate && opportunity.hourlyMaxRate"
         >
-          ${{ opportunity.node.hourlyMaxRate }} per hour
+          ${{ opportunity.hourlyMaxRate }} per hour
         </h3>
         <h3
           class="text-white"
           style="margin-top: 3px"
-          v-if="opportunity.node.royaltyRate"
+          v-if="opportunity.royaltyRate"
         >
-          {{ opportunity.node.royaltyRate }}
+          {{ opportunity.royaltyRate }}
         </h3>
       </div>
       <ul class="flex opportunity-category flex-wrap justify-content-end">
-        <li v-for="i in opportunity.node.categories" v-bind:key="i">
+        <li v-for="i in opportunity.categories" v-bind:key="i">
           <span
             class="bg-green-900 text-green-100 text-xs font-semibold mr-2 px-2.5 py-0.5 dark:bg-green-700 dark:text-green-100 flex rounded-lg mt-2"
             >{{ i }}</span

@@ -11,17 +11,6 @@ var bodyParser = require("body-parser");
 module.exports = function(api) {
   api.loadSource(async (actions) => {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
-
-    // Fetching opportunities from src/data/opportunities.json
-    const opportunities = require("./src/data/opportunities.json");
-
-    const opportunitiesCollection = actions.addCollection({
-      typeName: "Opportunities",
-    });
-
-    for (const opportunity of opportunities) {
-      opportunitiesCollection.addNode(opportunity);
-    }
   });
 
   api.createPages(({ createPage }) => {

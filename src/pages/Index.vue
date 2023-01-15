@@ -70,8 +70,8 @@ import Footer from "../components/Footer.vue";
       <!-- Opportunities -->
       <ul class="gap-4 mx-auto mb-2">
         <li
-          v-for="opportunity in $page.opportunities.edges"
-          :key="opportunity.node.id"
+          v-for="opportunity in opportunities"
+          :key="opportunity.name"
           class="p-3 w-full h-full"
         >
           <Opportunity :opportunity="opportunity" />
@@ -79,7 +79,7 @@ import Footer from "../components/Footer.vue";
       </ul>
 
       <!-- Pager -->
-      <div class="pagination-container">
+      <!-- <div class="pagination-container">
         <Pager
           :info="$page.opportunities.pageInfo"
           class="pagination"
@@ -87,7 +87,7 @@ import Footer from "../components/Footer.vue";
           :exactActiveLinkClass="'active-page'"
           :range="3"
         />
-      </div>
+      </div> -->
 
       <!-- Footer -->
       <Footer />
@@ -97,7 +97,7 @@ import Footer from "../components/Footer.vue";
 
 <script>
 import Opportunity from "../components/Opportunity.vue";
-import { Pager } from "gridsome";
+import opportunities from "@/data/opportunities.json";
 export default {
   metaInfo: {
     title: "Home",
@@ -117,9 +117,6 @@ export default {
       },
     ],
   },
-  components: {
-    Pager,
-  },
   data() {
     return {
       selectedCompanyType: "All Resources",
@@ -137,29 +134,3 @@ window.addEventListener("keydown", (event) => {
 });
 </script>
 
-<page-query>
-query ($page: Int) {
-  opportunities: allOpportunities(sortBy: "name", order: ASC, perPage: 10, page: $page) @paginate {
-    pageInfo {
-      totalPages
-      currentPage
-    }
-    edges {
-      node {
-        name
-        type
-        link
-        categories
-        minRate
-        maxRate
-        description
-        contact
-        royaltyRate
-        hourlyMinRate
-        hourlyMaxRate
-      }
-    }
-    totalCount
-  }
-}
-</page-query>
