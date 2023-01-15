@@ -10,7 +10,7 @@ import Footer from "../components/Footer.vue";
     <ScrollToTop />
     <section class="max-w-6xl p-4 mx-auto">
       <!-- Header -->
-      <Header />
+      <Header :totalCount="opportunities.length"/>
 
       <div class="flex md:flex-row flex-col px-1.5 py-4">
         <!-- Filtering -->
@@ -70,7 +70,10 @@ import Footer from "../components/Footer.vue";
       <!-- Opportunities -->
       <ul class="gap-4 mx-auto mb-2">
         <li
-          v-for="opportunity in opportunities"
+          v-for="opportunity in opportunities.slice(
+            (page - 1) * pageSize,
+            page * pageSize
+          )"
           :key="opportunity.name"
           class="p-3 w-full h-full"
         >
@@ -78,16 +81,8 @@ import Footer from "../components/Footer.vue";
         </li>
       </ul>
 
-      <!-- Pager -->
-      <!-- <div class="pagination-container">
-        <Pager
-          :info="$page.opportunities.pageInfo"
-          class="pagination"
-          :linkClass="'page-link'"
-          :exactActiveLinkClass="'active-page'"
-          :range="3"
-        />
-      </div> -->
+      <!-- Pagination -->
+      <Pagination :opportunities="opportunities" @page="getPage" />
 
       <!-- Footer -->
       <Footer />
@@ -98,6 +93,7 @@ import Footer from "../components/Footer.vue";
 <script>
 import Opportunity from "../components/Opportunity.vue";
 import opportunities from "@/data/opportunities.json";
+import Pagination from "../components/Pagination.vue";
 export default {
   metaInfo: {
     title: "Home",
@@ -123,7 +119,14 @@ export default {
       companyTypes: ["All Resources", "Publication", "Publisher", "Agency"],
       selectedSorting: "A-Z",
       sortings: ["A-Z", "Z-A", "Rate (low to high)", "Rate (high to low)"],
+      page: 1,
+      pageSize: 10,
     };
+  },
+  methods: {
+    getPage(value) {
+      this.page = value;
+    },
   },
 };
 
@@ -133,4 +136,3 @@ window.addEventListener("keydown", (event) => {
   }
 });
 </script>
-
