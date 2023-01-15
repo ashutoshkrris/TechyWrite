@@ -56,12 +56,12 @@ import Footer from "../components/Footer.vue";
           <input
             class="px-4 py-2 bg-gray-800 text-gray-300 outline-none rounded-md w-full focus:ring focus:ring-psybeam/80 -mr-[4.5rem]"
             id="search-bar"
-            placeholder="Search by opportunity name or category"
+            placeholder="Search by name or category"
             v-model="searchTerm"
             required
           />
           <span
-            class="z-10 text-gray-500 border border-gray-500 shrink-0 text-xs px-2 mr-4 py-1 rounded-lg select-none"
+            class="z-10 text-gray-500 border border-gray-500 shrink-0 text-xs px-2 mr-4 py-1 rounded-lg select-none hidden md:block"
           >
             Ctrl + /
           </span>
@@ -136,6 +136,14 @@ export default {
       searchTerm: "",
     };
   },
+  mounted() {
+    // Focus on search bar
+    window.addEventListener("keydown", (event) => {
+      if (event.ctrlKey && event.key === "/") {
+        document.querySelector("#search-bar").focus();
+      }
+    });
+  },
   methods: {
     getPageNumber(value) {
       this.page = value;
@@ -195,10 +203,4 @@ export default {
     },
   },
 };
-
-window.addEventListener("keydown", (event) => {
-  if (event.ctrlKey && event.key === "/") {
-    document.querySelector("#search-bar").focus();
-  }
-});
 </script>
