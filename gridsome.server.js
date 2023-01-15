@@ -23,7 +23,7 @@ module.exports = function(api) {
       try {
         const { formData } = req.body;
         const owner = "ashutoshkrris",
-          repo = "test-repo",
+          repo = "techywrite",
           title = `New Source: ${formData.companyName}`,
           body =
             "I want to add new source: \n\n" +
