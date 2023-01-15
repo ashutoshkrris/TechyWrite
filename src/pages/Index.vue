@@ -83,7 +83,11 @@ import Footer from "../components/Footer.vue";
       </ul>
 
       <!-- Pagination -->
-      <Pagination :opportunities="opportunitiesData" @page="getPage" />
+      <Pagination
+        :opportunities="opportunitiesData"
+        @pageNumber="getPageNumber"
+        v-if="opportunitiesData.length > pageSize"
+      />
 
       <!-- Footer -->
       <Footer />
@@ -127,7 +131,7 @@ export default {
     };
   },
   methods: {
-    getPage(value) {
+    getPageNumber(value) {
       this.page = value;
     },
   },

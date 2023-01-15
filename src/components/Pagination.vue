@@ -61,6 +61,14 @@ export default {
       return Math.ceil(this.opportunities.length / this.pageSize);
     },
   },
+  watch: {
+    opportunities() {
+      this.updatePages(); // Update pages when opportunities change
+      if (this.page > this.totalPages) {
+        this.page = 1;
+      }
+    },
+  },
   methods: {
     prevPage() {
       if (this.page > 1) {
@@ -109,7 +117,7 @@ export default {
       }
 
       // Emit page number for use in Index.vue
-      this.$emit("page", this.page);
+      this.$emit("pageNumber", this.page);
     },
   },
 };

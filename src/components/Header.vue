@@ -47,11 +47,11 @@
     <div v-else class="flex pl-4 pr-4 mb-4">
       <div class="w-1/2 text-left text-white mt-1">
         Displaying
-        <span class="bg-green-100 text-black px-2 rounded ml-2 mr-2">{{
+        <span class="bg-green-100 text-black px-2 rounded ml-1 mr-1">{{
           totalCount
         }}</span>
-        <span v-if="totalCount > 1">opportunities</span
-        ><span v-else>opportunity</span>
+        <span v-if="totalCount > 1"> opportunities</span
+        ><span v-else> opportunity</span>
       </div>
       <div class="w-1/2 text-right">
         <a href="/new-source"
