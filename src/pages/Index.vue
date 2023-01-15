@@ -10,7 +10,7 @@ import Footer from "../components/Footer.vue";
     <ScrollToTop />
     <section class="max-w-6xl p-4 mx-auto">
       <!-- Header -->
-      <Header :totalCount="filteredOpportunities.length" />
+      <Header :totalCount="sortedOpportunities.length" />
 
       <div class="flex md:flex-row flex-col px-1.5 py-4">
         <!-- Filtering -->
@@ -70,7 +70,7 @@ import Footer from "../components/Footer.vue";
       <!-- Opportunities -->
       <ul class="gap-4 mx-auto mb-2">
         <li
-          v-for="opportunity in filteredOpportunities.slice(
+          v-for="opportunity in sortedOpportunities.slice(
             (page - 1) * pageSize,
             page * pageSize
           )"
@@ -82,7 +82,7 @@ import Footer from "../components/Footer.vue";
       </ul>
 
       <!-- Pagination -->
-      <Pagination :opportunities="filteredOpportunities" @page="getPage" />
+      <Pagination :opportunities="sortedOpportunities" @page="getPage" />
 
       <!-- Footer -->
       <Footer />
@@ -137,8 +137,53 @@ export default {
       )
         return this.opportunities;
       return this.opportunities.filter(
-        (opportunity) => opportunity.type.toLowerCase() === this.selectedCompanyType.toLowerCase()
+        (opportunity) =>
+          opportunity.type.toLowerCase() ===
+          this.selectedCompanyType.toLowerCase()
       );
+    },
+    sortedOpportunities() {
+      switch (this.selectedSorting) {
+        case "A-Z":
+          this.filteredOpportunities.sort((a, b) =>
+            a.name.localeCompare(b.name)
+          );
+          break;
+        case "Z-A":
+          this.filteredOpportunities.sort((a, b) =>
+            b.name.localeCompare(a.name)
+          );
+          break;
+        case "Rate (low to high)":
+          this.filteredOpportunities.sort((a, b) =>
+            (a.maxRate || a.hourlyMaxRate) > (b.maxRate || b.hourlyMaxRate)
+              ? 1
+              : -1
+          );
+          break;
+        case "Rate (high to low)":
+          this.filteredOpportunities.sort((a, b) =>
+            (a.maxRate || a.hourlyMaxRate) < (b.maxRate || b.hourlyMaxRate)
+              ? 1
+              : -1
+          );
+          break;
+        default:
+          break;
+      }
+      if (this.selectedSorting === "A-Z") {
+        return this.filteredOpportunities.sort((a, b) =>
+          a.name.localeCompare(b.name)
+        );
+      } else if (this.selectedSorting === "Z-A") {
+        return this.filteredOpportunities.sort((a, b) =>
+          b.name.localeCompare(a.name)
+        );
+      } else if (this.selectedSorting === "Rate (low to high)") {
+        return this.filteredOpportunities.sort((a, b) => a.rate - b.rate);
+      } else if (this.selectedSorting === "Rate (high to low)") {
+        return this.filteredOpportunities.sort((a, b) => b.rate - a.rate);
+      }
     },
   },
 };
