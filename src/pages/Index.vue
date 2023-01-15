@@ -135,8 +135,6 @@ export default {
     opportunitiesData() {
       let filtered = this.opportunities;
 
-      console.log("1: " + filtered);
-
       // Apply filters
       if (this.selectedCompanyType !== "All Resources")
         filtered = filtered.filter(
@@ -144,8 +142,6 @@ export default {
             opportunity.type.toLowerCase() ===
             this.selectedCompanyType.toLowerCase()
         );
-
-      console.log("2: " + filtered);
 
       // Apply sorting
       switch (this.selectedSorting) {
@@ -172,7 +168,6 @@ export default {
         default:
           break;
       }
-      console.log("3: " + filtered);
 
       // Apply search
       if (this.searchTerm)
@@ -185,7 +180,6 @@ export default {
               category.toLowerCase().includes(this.searchTerm.toLowerCase())
             )
         );
-      console.log("4: " + filtered);
 
       return filtered;
     },
