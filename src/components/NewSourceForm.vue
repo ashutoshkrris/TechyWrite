@@ -1,11 +1,5 @@
 <template>
   <div class="mb-4 px-4 sm:px-6 lg:px-8">
-    <!-- <h2 class="flex text-2xl text-white font-semibold mr-4 py-0.5">
-      Suggest a Source
-    </h2>
-    <p class="text-gray-400 text-sm mb-6 mt-3">
-      You can also use this form to request an update to an existing resource.
-    </p> -->
     <form @submit.prevent="submitForm" class="mt-6">
       <div class="text-white">
         <label>Company Name</label> <br />

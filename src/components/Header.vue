@@ -3,8 +3,7 @@
     <section class="flex flex-wrap justify-center gap-4 mb-5">
       <img
         src="../assets/logo.png"
-        class="object-cover rounded-full p-4"
-        style="width: 60%"
+        class="object-cover rounded-full p-4 app-logo"
         alt="logo"
       />
     </section>
@@ -46,12 +45,12 @@
 
     <!-- To be displayed on all other pages -->
     <div v-else class="flex pl-4 pr-4 mb-4">
-      <div class="w-1/2 text-left text-white ">
+      <div class="w-1/2 text-left text-white mt-1">
         Displaying
         <span class="bg-green-100 text-black px-2 rounded ml-2 mr-2">{{
           $page.opportunities.totalCount
         }}</span>
-        Opportunities
+        opportunities
       </div>
       <div class="w-1/2 text-right">
         <a href="/new-source"
