@@ -82,6 +82,11 @@ import Footer from "../components/Footer.vue";
         </li>
       </ul>
 
+      <!-- Shown only if no results found -->
+      <div v-if="opportunitiesData.length == 0" class="py-6 space-y-20">
+        <NoResultsFound :searchTerm="this.searchTerm" />
+      </div>
+
       <!-- Pagination -->
       <Pagination
         :opportunities="opportunitiesData"
@@ -99,6 +104,7 @@ import Footer from "../components/Footer.vue";
 import Opportunity from "../components/Opportunity.vue";
 import opportunities from "@/data/opportunities.json";
 import Pagination from "../components/Pagination.vue";
+import NoResultsFound from "../components/NoResultsFound.vue";
 export default {
   metaInfo: {
     title: "Home",
