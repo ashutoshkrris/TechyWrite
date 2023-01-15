@@ -10,7 +10,7 @@ import Footer from "../components/Footer.vue";
     <ScrollToTop />
     <section class="max-w-6xl p-4 mx-auto">
       <!-- Header -->
-      <Header :totalCount="sortedOpportunities.length" />
+      <Header :totalCount="opportunitiesData.length" />
 
       <div class="flex md:flex-row flex-col px-1.5 py-4">
         <!-- Filtering -->
@@ -57,6 +57,7 @@ import Footer from "../components/Footer.vue";
             class="px-4 py-2 bg-gray-800 text-gray-300 outline-none rounded-md w-full focus:ring focus:ring-psybeam/80 -mr-[4.5rem]"
             id="search-bar"
             placeholder="Search by opportunity name or category"
+            v-model="searchTerm"
             required
           />
           <span
@@ -70,7 +71,7 @@ import Footer from "../components/Footer.vue";
       <!-- Opportunities -->
       <ul class="gap-4 mx-auto mb-2">
         <li
-          v-for="opportunity in sortedOpportunities.slice(
+          v-for="opportunity in opportunitiesData.slice(
             (page - 1) * pageSize,
             page * pageSize
           )"
@@ -82,7 +83,7 @@ import Footer from "../components/Footer.vue";
       </ul>
 
       <!-- Pagination -->
-      <Pagination :opportunities="sortedOpportunities" @page="getPage" />
+      <Pagination :opportunities="opportunitiesData" @page="getPage" />
 
       <!-- Footer -->
       <Footer />
@@ -122,6 +123,7 @@ export default {
       sortings: ["A-Z", "Z-A", "Rate (low to high)", "Rate (high to low)"],
       page: 1,
       pageSize: 10,
+      searchTerm: "",
     };
   },
   methods: {
@@ -130,39 +132,38 @@ export default {
     },
   },
   computed: {
-    filteredOpportunities() {
-      if (
-        !this.selectedCompanyType ||
-        this.selectedCompanyType === "All Resources"
-      )
-        return this.opportunities;
-      return this.opportunities.filter(
-        (opportunity) =>
-          opportunity.type.toLowerCase() ===
-          this.selectedCompanyType.toLowerCase()
-      );
-    },
-    sortedOpportunities() {
+    opportunitiesData() {
+      let filtered = this.opportunities;
+
+      console.log("1: " + filtered);
+
+      // Apply filters
+      if (this.selectedCompanyType !== "All Resources")
+        filtered = filtered.filter(
+          (opportunity) =>
+            opportunity.type.toLowerCase() ===
+            this.selectedCompanyType.toLowerCase()
+        );
+
+      console.log("2: " + filtered);
+
+      // Apply sorting
       switch (this.selectedSorting) {
         case "A-Z":
-          this.filteredOpportunities.sort((a, b) =>
-            a.name.localeCompare(b.name)
-          );
+          filtered.sort((a, b) => a.name.localeCompare(b.name));
           break;
         case "Z-A":
-          this.filteredOpportunities.sort((a, b) =>
-            b.name.localeCompare(a.name)
-          );
+          filtered.sort((a, b) => b.name.localeCompare(a.name));
           break;
         case "Rate (low to high)":
-          this.filteredOpportunities.sort((a, b) =>
+          filtered.sort((a, b) =>
             (a.maxRate || a.hourlyMaxRate) > (b.maxRate || b.hourlyMaxRate)
               ? 1
               : -1
           );
           break;
         case "Rate (high to low)":
-          this.filteredOpportunities.sort((a, b) =>
+          filtered.sort((a, b) =>
             (a.maxRate || a.hourlyMaxRate) < (b.maxRate || b.hourlyMaxRate)
               ? 1
               : -1
@@ -171,19 +172,22 @@ export default {
         default:
           break;
       }
-      if (this.selectedSorting === "A-Z") {
-        return this.filteredOpportunities.sort((a, b) =>
-          a.name.localeCompare(b.name)
+      console.log("3: " + filtered);
+
+      // Apply search
+      if (this.searchTerm)
+        filtered = filtered.filter(
+          (opportunity) =>
+            opportunity.name
+              .toLowerCase()
+              .includes(this.searchTerm.toLowerCase()) ||
+            opportunity.categories.some((category) =>
+              category.toLowerCase().includes(this.searchTerm.toLowerCase())
+            )
         );
-      } else if (this.selectedSorting === "Z-A") {
-        return this.filteredOpportunities.sort((a, b) =>
-          b.name.localeCompare(a.name)
-        );
-      } else if (this.selectedSorting === "Rate (low to high)") {
-        return this.filteredOpportunities.sort((a, b) => a.rate - b.rate);
-      } else if (this.selectedSorting === "Rate (high to low)") {
-        return this.filteredOpportunities.sort((a, b) => b.rate - a.rate);
-      }
+      console.log("4: " + filtered);
+
+      return filtered;
     },
   },
 };

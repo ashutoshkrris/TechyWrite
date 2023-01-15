@@ -50,7 +50,8 @@
         <span class="bg-green-100 text-black px-2 rounded ml-2 mr-2">{{
           totalCount
         }}</span>
-        opportunities
+        <span v-if="totalCount > 1">opportunities</span
+        ><span v-else>opportunity</span>
       </div>
       <div class="w-1/2 text-right">
         <a href="/new-source"
