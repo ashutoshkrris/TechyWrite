@@ -2,9 +2,9 @@
   "name": "techywrite-website",
   "private": true,
   "scripts": {
-    "build": "gridsome build",
-    "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider; gridsome build",
+    "develop": "export NODE_OPTIONS=--openssl-legacy-provider; gridsome develop",
+    "explore": "export NODE_OPTIONS=--openssl-legacy-provider; gridsome explore"
   },
   "dependencies": {
     "axios": "^1.2.2",
