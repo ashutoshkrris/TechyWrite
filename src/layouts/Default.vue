@@ -47,6 +47,10 @@ export default {
         content:
           "TechyWrite is a place where you can find available paid writing opportunities for technical writers.",
       },
+      {
+        name: "google-site-verification",
+        content: "-a6C9_5qReKIaCo5Ih9uBI7oEq6t7ZeP23oDkZ0xKJY"
+      }
     ],
   },
 };
