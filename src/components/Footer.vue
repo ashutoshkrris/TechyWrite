@@ -1,43 +1,43 @@
-<script setup>
-import Contributors from "../components/Contributors.vue";
-</script>
-
 <template>
-  <footer>
-    <div class="px-4 py-4 mx-auto max-w-7xl sm:px-6 lg:px-8 space-y-8">
-      <!-- Mention contributors -->
-      <Contributors />
-
-      <div class="md:flex md:items-center md:justify-between">
-        <div class="flex justify-center space-x-6 md:order-2">
-          <a
-            href="https://twitter.com/ashutoshkrris"
-            class="text-gray-400 hover:text-white"
-            target="_blank"
-            rel="noopener"
+  <footer
+    class="p-4 mx-3 my-6 bg-gray-900 rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-900"
+  >
+    <div class="sm:flex sm:items-center sm:justify-between">
+      <a href="/" class="flex items-center mb-4 sm:mb-0">
+        <img
+          src="https://i.imgur.com/xSOfwDU.png"
+          class="h-16 mr-3"
+          alt="Flowbite Logo"
+        />
+      </a>
+      <ul
+        class="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400"
+      >
+        <li>
+          <a href="/about" class="mr-4 hover:underline hover:text-white md:mr-6 ">About</a>
+        </li>
+        <li>
+          <a href="/new-source" class="mr-4 hover:underline hover:text-white md:mr-6 "
+            >Suggest a Source</a
           >
-            <span class="sr-only">Twitter</span>
-            <img class="w-[30px]" :src="Twitter" alt="Twitter logo" />
-          </a>
-
-          <a
-            href="https://github.com/ashutoshkrris"
-            class="text-gray-400 hover:text-white"
-            target="_blank"
-            rel="noopener"
+        </li>
+        <li>
+          <a href="/contributors" class="mr-4 hover:underline hover:text-white md:mr-6"
+            >Contributors</a
           >
-            <span class="sr-only">GitHub</span>
-            <img :src="GitHub" alt="github" />
-          </a>
-        </div>
-        <div class="mt-8 md:mt-0 md:order-1">
-          <p class="text-sm text-center text-gray-400">
-            &copy; 2022 - {{ new Date().getFullYear() }}, Built with ❤️ by
-            <a href="https://ashutoshkrris.in">Ashutosh Krishna</a>
-          </p>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <span class="block text-sm text-gray-500 text-center sm:text-center dark:text-gray-400"
+      >Inspired by, but not associated with, <a href="http://whopayswriters.com/" class="hover:underline hover:text-white">Who Pays Writers</a> and
+      <a href="https://whopaystechnicalwriters.com/" class="hover:underline hover:text-white"
+        >Who Pays Technical Writers</a
+      >.<br />&copy; 2022 - {{ new Date().getFullYear() }}
+      <a href="https://ashutoshkrris.in/" class="hover:underline hover:text-white"
+        >Ashutosh Krishna</a
+      >. All Rights Reserved.
+    </span>
   </footer>
 </template>
 
