@@ -16,5 +16,11 @@ module.exports = {
         mainCssFile: "./src/assets/tailwind.css",
       },
     },
+    {
+      use: "@gridsome/plugin-sitemap",
+      options: {
+        exclude: [],
+      },
+    },
   ],
 };
