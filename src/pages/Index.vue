@@ -17,7 +17,7 @@ import Footer from "../components/Footer.vue";
         <div class="w-full md:w-1/4 px-2 py-1">
           <div class="flex rounded-md shadow-sm">
             <span
-              class="pr-4 pl-4 inline-flex items-center min-w-fit rounded-l-md border border-r-0 border-green-200 bg-green-800 text-white dark:bg-green-800 dark:border-green-800 dark:text-white"
+              class="pr-4 pl-4 inline-flex items-center min-w-fit rounded-l-md border border-r-0 border-green-800 bg-green-800 text-white dark:bg-green-800 dark:border-green-800 dark:text-white"
               >Type</span
             >
             <select
@@ -36,7 +36,7 @@ import Footer from "../components/Footer.vue";
         <div class="w-full md:w-1/4 px-2 py-1">
           <div class="flex rounded-md shadow-sm">
             <span
-              class="pr-4 pl-4 inline-flex items-center min-w-fit rounded-l-md border border-r-0 border-green-200 bg-green-800 text-white dark:bg-green-800 dark:border-green-800 dark:text-white"
+              class="pr-4 pl-4 inline-flex items-center min-w-fit rounded-l-md border border-r-0 border-green-800 bg-green-800 text-white dark:bg-green-800 dark:border-green-800 dark:text-white"
               >Sort By</span
             >
             <select
