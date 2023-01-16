@@ -84,7 +84,7 @@
               >
               <input
                 v-model="formData.minRate"
-                class="py-2 px-4 pr-11 block w-full border-gray-200 shadow-sm rounded-r-md focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400"
+                class="py-2 px-4 pr-11 block w-full bg-gray-800 text-gray-300 border-gray-200 shadow-sm rounded-r-md focus:ring focus:ring-psybeam/80 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400"
               />
             </div>
           </div>
@@ -98,7 +98,7 @@
               >
               <input
                 v-model="formData.maxRate"
-                class="py-2 px-4 pr-11 block w-full border-gray-200 shadow-sm rounded-r-md focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400"
+                class="py-2 px-4 pr-11 block w-full bg-gray-800 text-gray-300 border-gray-200 shadow-sm rounded-r-md focus:ring focus:ring-psybeam/80 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400"
               />
             </div>
           </div>
@@ -122,7 +122,7 @@
         <br />
       </div>
       <div v-else>
-        <div class="flex">
+        <div class="flex mb-4">
           <div class="text-white w-1/2 mr-4">
             <label>Hourly Minimum Rate</label><br />
             <div class="flex rounded-md shadow-sm mt-2">
@@ -132,7 +132,7 @@
               >
               <input
                 v-model="formData.hourlyMinRate"
-                class="py-2 px-4 pr-11 block w-full border-gray-200 shadow-sm rounded-r-md focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400"
+                class="py-2 px-4 pr-11 block w-full bg-gray-800 text-gray-300 border-gray-200 shadow-sm rounded-r-md focus:ring focus:ring-psybeam/80 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400"
               />
             </div>
           </div>
@@ -146,7 +146,7 @@
               >
               <input
                 v-model="formData.hourlyMaxRate"
-                class="py-2 px-4 pr-11 block w-full border-gray-200 shadow-sm rounded-r-md focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400"
+                class="py-2 px-4 pr-11 block w-full bg-gray-800 text-gray-300 border-gray-200 shadow-sm rounded-r-md focus:ring focus:ring-psybeam/80 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400"
               />
             </div>
           </div>
