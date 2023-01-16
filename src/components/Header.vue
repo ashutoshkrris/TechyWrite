@@ -18,12 +18,12 @@
 
     <!-- To be displayed on New Source page -->
     <div
-      v-if="this.$route.path === '/new-source'"
+      v-if="this.$route.path !== '/'"
       class="mb-4 px-4 sm:px-6 lg:px-8"
     >
       <div class="flex">
         <div class="w-2/3 text-left">
-          <h2 class="flex text-2xl text-white font-semibold mr-4 py-0.5">
+          <h2 v-if="this.$route.path === '/new-source'" class="flex text-2xl text-white font-semibold mr-4 py-0.5">
             Suggest a Source
           </h2>
         </div>
@@ -38,13 +38,13 @@
           >
         </div>
       </div>
-      <p class="text-gray-400 text-sm mb-6 mt-3">
+      <p v-if="this.$route.path === '/new-source'" class="text-gray-400 text-sm mb-6 mt-3">
         You can also use this form to request an update to an existing resource.
       </p>
     </div>
 
-    <!-- To be displayed on all other pages -->
-    <div v-else class="flex pl-4 pr-4 mb-4">
+    <!-- To be displayed on index -->
+    <div v-else-if="this.$route.path === '/'" class="flex pl-4 pr-4 mb-4">
       <div class="w-1/2 text-left text-white mt-1">
         Displaying
         <span class="bg-green-100 text-black px-2 rounded ml-1 mr-1">{{

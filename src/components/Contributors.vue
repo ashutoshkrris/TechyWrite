@@ -1,6 +1,6 @@
 <template>
   <div
-    class="text-center border-2 border-gray-500 rounded-xl px-2 md:px-6 py-4 space-y-6"
+    class="text-center border-2 border-gray-500 rounded-xl px-2 mx-3 md:px-6 py-4 space-y-6"
   >
     <p class="text-gray-200 text-lg font-medium">Our Contributors</p>
     <ul class="flex flex-wrap items-center justify-center">
