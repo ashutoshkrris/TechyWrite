@@ -24,6 +24,11 @@ I hope that this website helps you find the perfect gig or connect with awesome 
 
 Star and Fork the Repo 🌟 and this will keep us motivated.
 
+Install Gridsome CLI tool
+```bash
+npm install --global @gridsome/cli
+```
+
 Clone the repository
 
 ```bash
