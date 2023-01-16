@@ -74,21 +74,33 @@
       </div>
       <br />
       <div v-if="formData.companyType === 'Publication'">
-        <div class="flex">
+        <div class="flex mb-4">
           <div class="text-white w-1/2 mr-4">
             <label>Minimum Rate</label><br />
-            <input
-              v-model="formData.minRate"
-              class="px-4 py-2 mt-2 mb-4 bg-gray-800 text-gray-300 outline-none rounded w-full -mr-[4.5rem] focus:ring focus:ring-psybeam/80"
-            />
+            <div class="flex rounded-md shadow-sm mt-2">
+              <span
+                class="pr-4 pl-4 inline-flex items-center min-w-fit rounded-l-md border border-r-0 border-green-800 bg-green-800 text-white dark:bg-green-800 dark:border-green-800 dark:text-white"
+                >$</span
+              >
+              <input
+                v-model="formData.minRate"
+                class="py-2 px-4 pr-11 block w-full border-gray-200 shadow-sm rounded-r-md focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400"
+              />
+            </div>
           </div>
           <br />
           <div class="text-white w-1/2">
             <label>Maximum Rate</label> <br />
-            <input
-              v-model="formData.maxRate"
-              class="px-4 py-2 mt-2 mb-4 bg-gray-800 text-gray-300 outline-none rounded w-full -mr-[4.5rem] focus:ring focus:ring-psybeam/80"
-            />
+            <div class="flex rounded-md shadow-sm mt-2">
+              <span
+                class="pr-4 pl-4 inline-flex items-center min-w-fit rounded-l-md border border-r-0 border-green-800 bg-green-800 text-white dark:bg-green-800 dark:border-green-800 dark:text-white"
+                >$</span
+              >
+              <input
+                v-model="formData.maxRate"
+                class="py-2 px-4 pr-11 block w-full border-gray-200 shadow-sm rounded-r-md focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400"
+              />
+            </div>
           </div>
           <br />
         </div>
@@ -113,18 +125,30 @@
         <div class="flex">
           <div class="text-white w-1/2 mr-4">
             <label>Hourly Minimum Rate</label><br />
-            <input
-              v-model="formData.hourlyMinRate"
-              class="px-4 py-2 mt-2 mb-4 bg-gray-800 text-gray-300 outline-none rounded w-full -mr-[4.5rem] focus:ring focus:ring-psybeam/80"
-            />
+            <div class="flex rounded-md shadow-sm mt-2">
+              <span
+                class="pr-4 pl-4 inline-flex items-center min-w-fit rounded-l-md border border-r-0 border-green-800 bg-green-800 text-white dark:bg-green-800 dark:border-green-800 dark:text-white"
+                >$</span
+              >
+              <input
+                v-model="formData.hourlyMinRate"
+                class="py-2 px-4 pr-11 block w-full border-gray-200 shadow-sm rounded-r-md focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400"
+              />
+            </div>
           </div>
           <br />
           <div class="text-white w-1/2">
             <label>Hourly Maximum Rate</label> <br />
-            <input
-              v-model="formData.hourlyMaxRate"
-              class="px-4 py-2 mt-2 mb-4 bg-gray-800 text-gray-300 outline-none rounded w-full -mr-[4.5rem] focus:ring focus:ring-psybeam/80"
-            />
+            <div class="flex rounded-md shadow-sm mt-2">
+              <span
+                class="pr-4 pl-4 inline-flex items-center min-w-fit rounded-l-md border border-r-0 border-green-800 bg-green-800 text-white dark:bg-green-800 dark:border-green-800 dark:text-white"
+                >$</span
+              >
+              <input
+                v-model="formData.hourlyMaxRate"
+                class="py-2 px-4 pr-11 block w-full border-gray-200 shadow-sm rounded-r-md focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400"
+              />
+            </div>
           </div>
           <br />
         </div>
