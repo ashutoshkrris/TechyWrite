@@ -24,7 +24,7 @@ export default {
         property: "og:url",
         content: "https://techywrite.vercel.app",
       },
-      { property: "og:title", content: "Guest Writings 📝 - Ashutosh Krishna" },
+      { property: "og:title", content: "Paid Techical Writing Opportunities | TechyWrite" },
       {
         property: "og:description",
         content:
@@ -36,7 +36,7 @@ export default {
       { property: "twitter:image", content: "https://i.imgur.com/xSOfwDU.png" },
       {
         property: "twitter:title",
-        content: "Guest Writings 📝 - Ashutosh Krishna",
+        content: "Paid Techical Writing Opportunities | TechyWrite",
       },
       {
         property: "twitter:url",
