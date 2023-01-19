@@ -22,7 +22,7 @@ import Footer from "../components/Footer.vue";
             >
             <select
               v-model="selectedCompanyType"
-              class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-sm rounded-r-md focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400"
+              class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-sm rounded-r-md focus:z-10 focus:border-blue-500 focus:ring-blue-500 bg-gray-800 text-gray-300"
               required
             >
               <option v-for="option in companyTypes" :value="option">{{
@@ -41,7 +41,7 @@ import Footer from "../components/Footer.vue";
             >
             <select
               v-model="selectedSorting"
-              class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-sm rounded-r-md focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400"
+              class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-sm rounded-r-md focus:z-10 focus:border-blue-500 focus:ring-blue-500 bg-gray-800 text-gray-300"
               required
             >
               <option v-for="option in sortings" :value="option">{{
