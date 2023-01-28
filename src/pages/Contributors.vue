@@ -26,7 +26,7 @@ export default {
     meta: [
       {
         property: "og:url",
-        content: "https://techywrite.vercel.app/contributors",
+        content: "https://techywrite.ashutoshkrris.in/contributors",
       },
       { property: "og:title", content: "Contributors - TechyWrite" },
       {
@@ -35,7 +35,7 @@ export default {
       },
       {
         property: "twitter:url",
-        content: "https://techywrite.vercel.app/contributors",
+        content: "https://techywrite.ashutoshkrris.in/contributors",
       },
     ],
   },

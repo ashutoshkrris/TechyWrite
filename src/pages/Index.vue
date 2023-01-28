@@ -111,7 +111,7 @@ export default {
     meta: [
       {
         property: "og:url",
-        content: "https://techywrite.vercel.app",
+        content: "https://techywrite.ashutoshkrris.in",
       },
       { property: "og:title", content: "Home - TechyWrite" },
       {
@@ -120,7 +120,7 @@ export default {
       },
       {
         property: "twitter:url",
-        content: "https://techywrite.vercel.app",
+        content: "https://techywrite.ashutoshkrris.in",
       },
     ],
   },

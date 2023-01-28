@@ -22,9 +22,12 @@ export default {
       },
       {
         property: "og:url",
-        content: "https://techywrite.vercel.app",
+        content: "https://techywrite.ashutoshkrris.in",
       },
-      { property: "og:title", content: "Paid Techical Writing Opportunities | TechyWrite" },
+      {
+        property: "og:title",
+        content: "Paid Techical Writing Opportunities | TechyWrite",
+      },
       {
         property: "og:description",
         content:
@@ -40,7 +43,7 @@ export default {
       },
       {
         property: "twitter:url",
-        content: "https://techywrite.vercel.app",
+        content: "https://techywrite.ashutoshkrris.in",
       },
       {
         property: "twitter:description",
@@ -49,8 +52,8 @@ export default {
       },
       {
         name: "google-site-verification",
-        content: "-a6C9_5qReKIaCo5Ih9uBI7oEq6t7ZeP23oDkZ0xKJY"
-      }
+        content: "-a6C9_5qReKIaCo5Ih9uBI7oEq6t7ZeP23oDkZ0xKJY",
+      },
     ],
   },
 };

@@ -27,7 +27,7 @@ export default {
     meta: [
       {
         property: "og:url",
-        content: "https://techywrite.vercel.app/new-source",
+        content: "https://techywrite.ashutoshkrris.in/new-source",
       },
       { property: "og:title", content: "Suggest a Source - TechyWrite" },
       {
@@ -36,7 +36,7 @@ export default {
       },
       {
         property: "twitter:url",
-        content: "https://techywrite.vercel.app/new-source",
+        content: "https://techywrite.ashutoshkrris.in/new-source",
       },
     ],
   },

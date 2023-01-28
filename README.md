@@ -25,6 +25,7 @@ I hope that this website helps you find the perfect gig or connect with awesome 
 Star and Fork the Repo 🌟 and this will keep us motivated.
 
 Install Gridsome CLI tool
+
 ```bash
 npm install --global @gridsome/cli
 ```
@@ -55,7 +56,7 @@ gridsome develop
 
 ## Adding a new opportunity to the list
 
-Found a paid technical writing opportunity we don't have yet? You can easily add it from our website: https://techywrite.vercel.app/new-source
+Found a paid technical writing opportunity we don't have yet? You can easily add it from our website: https://techywrite.ashutoshkrris.in/new-source
 
 Alternatively, you can add it using the following steps:
 

@@ -6,7 +6,7 @@
 
 module.exports = {
   siteName: "TechyWrite",
-  siteUrl: "https://techywrite.vercel.app",
+  siteUrl: "https://techywrite.ashutoshkrris.in",
   icon: "./src/favicon.png",
   plugins: [
     {
