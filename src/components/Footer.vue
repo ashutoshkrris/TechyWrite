@@ -7,22 +7,22 @@
         <img
           src="https://i.imgur.com/xSOfwDU.png"
           class="h-16 mr-3"
-          alt="Flowbite Logo"
+          alt="TechyWrite Logo"
         />
       </a>
       <ul
         class="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400"
       >
         <li>
-          <a href="/about" class="mr-4 hover:underline hover:text-white md:mr-6 ">About</a>
+          <a href="/about" class="mr-4 hover:underline hover:text-white md:mr-6 text-base">About</a>
         </li>
         <li>
-          <a href="/new-source" class="mr-4 hover:underline hover:text-white md:mr-6 "
+          <a href="/new-source" class="mr-4 hover:underline hover:text-white md:mr-6 text-base"
             >Suggest a Source</a
           >
         </li>
         <li>
-          <a href="/contributors" class="mr-4 hover:underline hover:text-white md:mr-6"
+          <a href="/contributors" class="mr-4 hover:underline hover:text-white md:mr-6 text-base"
             >Contributors</a
           >
         </li>
