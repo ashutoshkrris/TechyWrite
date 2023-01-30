@@ -364,8 +364,8 @@
     "link": "https://neptune.ai/write-for-us?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
     "contact": "guestwriters@neptune.ai",
     "categories": ["Data Science"],
-    "minRate": 200,
-    "maxRate": 500,
+    "minRate": 300,
+    "maxRate": 600,
     "description": "Also pays $50-150 for non-technical blog posts."
   },
   {
