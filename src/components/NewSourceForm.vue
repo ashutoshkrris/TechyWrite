@@ -171,6 +171,7 @@
       <br />
       <button
         type="submit"
+        id="submitBtn"
         class="bg-green-800 text-white rounded p-3 focus:outline-none focus:ring focus:ring-psybeam/80 hover:bg-green-900"
       >
         Submit
@@ -219,6 +220,8 @@ export default {
         return;
       }
 
+      document.getElementById("submitBtn").innerHTML = "Submitting";
+
       // Remove all fields with empty values
       this.formData = Object.entries(this.formData)
         .filter(([key, value]) => value)
@@ -232,6 +235,7 @@ export default {
       };
       const response = await axios.post("/create-issue", data);
       if (response.status === 201) {
+        document.getElementById("submitBtn").innerHTML = "Submit";
         alert("Form submitted successfully!");
         this.formData = {
           companyName: "",

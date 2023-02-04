@@ -6,7 +6,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 const axios = require("axios");
-var bodyParser = require("body-parser");
+let bodyParser = require("body-parser");
 
 module.exports = function(api) {
   api.loadSource(async (actions) => {
@@ -25,11 +25,13 @@ module.exports = function(api) {
         const owner = "ashutoshkrris",
           repo = "techywrite",
           title = `New Source: ${formData.companyName}`,
-          body =
-            "I want to add new source: \n\n" +
-            "```json\n" +
-            JSON.stringify(formData, null, 2) +
-            "\n```";
+          topicsArray = formData.topics.split(", ");
+        formData.topics = topicsArray;
+        const body =
+          "I want to add new source: \n\n" +
+          "```json\n" +
+          JSON.stringify(formData, null, 2) +
+          "\n```";
         const data = {
           title: title,
           body: body,
