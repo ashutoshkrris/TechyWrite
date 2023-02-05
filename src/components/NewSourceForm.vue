@@ -233,7 +233,7 @@ export default {
       const data = {
         formData: this.formData,
       };
-      const response = await axios.post("/create-issue", data);
+      const response = await axios.post("https://github-issue-khaki.vercel.app/create-issue", data);
       if (response.status === 201) {
         document.getElementById("submitBtn").innerHTML = "Submit";
         alert("Form submitted successfully!");
