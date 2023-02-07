@@ -9,7 +9,7 @@ import cat from "../assets/cat.svg";
     </div>
     <div class="text-center space-y-4" style="margin-top: 0px">
       <p class="text-white text-2xl md:text-2xl">
-        Uh Oh! We couldn't find "<strong>{{ searchTerm }}</strong
+        Uh Oh! We couldn't find "<strong style="word-break: break-all;">{{ searchTerm }}</strong
         >"
       </p>
     </div>

@@ -54,7 +54,7 @@ import Footer from "../components/Footer.vue";
         <!-- Searching -->
         <div class="flex items-center w-full md:w-1/2 px-2 py-1">
           <input
-            class="px-4 py-2 bg-gray-800 text-gray-300 outline-none rounded-md w-full focus:ring focus:ring-psybeam/80 -mr-[4.5rem]"
+            class="px-4 py-2 bg-gray-800 text-gray-300 outline-none rounded-md w-full focus:ring focus:ring-psybeam/80 -mr-[4.5rem] pr-[5.5rem]"
             id="search-bar"
             placeholder="Search by name or category"
             v-model="searchTerm"
