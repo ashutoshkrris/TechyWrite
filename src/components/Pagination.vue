@@ -64,9 +64,6 @@ export default {
   watch: {
     opportunities() {
       this.updatePages(); // Update pages when opportunities change
-      if (this.page > this.totalPages) {
-        this.page = 1;
-      }
     },
   },
   methods: {
@@ -114,6 +111,10 @@ export default {
           // All possible page numbers have been added
           break;
         }
+      }
+
+      if (this.page > this.totalPages) {
+        this.page = 1;
       }
 
       // Emit page number for use in Index.vue

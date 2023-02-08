@@ -59,7 +59,6 @@ import Footer from "../components/Footer.vue";
             type="search"
             placeholder="Search by name or category"
             v-model="searchTerm"
-            @input="setPageNumber(1)"
             required
           />
           <span
