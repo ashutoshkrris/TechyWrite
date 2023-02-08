@@ -59,6 +59,7 @@ import Footer from "../components/Footer.vue";
             type="search"
             placeholder="Search by name or category"
             v-model="searchTerm"
+            @input="setPageNumber(1)"
             required
           />
           <span
@@ -91,7 +92,7 @@ import Footer from "../components/Footer.vue";
       <!-- Pagination -->
       <Pagination
         :opportunities="opportunitiesData"
-        @pageNumber="getPageNumber"
+        @pageNumber="setPageNumber"
         v-if="opportunitiesData.length > pageSize"
       />
 
@@ -146,7 +147,7 @@ export default {
     });
   },
   methods: {
-    getPageNumber(value) {
+    setPageNumber(value) {
       this.page = value;
     },
   },
