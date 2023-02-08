@@ -71,17 +71,20 @@ export default {
       if (this.page > 1) {
         this.page--;
         this.updatePages();
+        window.scrollTo({ top: 0, behavior: "smooth" });
       }
     },
     nextPage() {
       if (this.page < this.totalPages) {
         this.page++;
         this.updatePages();
+        window.scrollTo({ top: 0, behavior: "smooth" });
       }
     },
     gotoPage(p) {
       this.page = p;
       this.updatePages();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     },
     updatePages() {
       this.pages = [];
