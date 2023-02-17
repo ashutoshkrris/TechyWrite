@@ -1018,5 +1018,13 @@
     "minRate": 100,
     "maxRate": 500,
     "description": "Submit your title idea, an outline of your article, and a writing sample that showcases your ability to explain your technical knowledge to others. Most new articles are paid out at $400. Complex tutorials may be paid out at up to $500. Updates for existing tutorials, such as new version changes, are typically paid out at $100 to $200, based on the number of changes."
+  },
+  {
+    "name": "Abstract API",
+    "type": "Publication",
+    "link": "https://www.abstractapi.com/write-for-us",
+    "contact": "writeforus@abstractapi.com",
+    "description": "Technical content and tutorials related to the APIs in their catalog.\nOpen to other content promotion opportunities as well.",
+    "minRate": "100"
   }
 ]
