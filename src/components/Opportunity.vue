@@ -5,7 +5,7 @@
       style="position: relative"
     >
       <h2
-        class="flex rounded-2xl opportunity-type text-xs font-semibold mr-4 px-2.5 py-0.5 dark:bg-white dark:text-green-100 rounded-lg hover:bg-opacity-60 cursor-pointer"
+        class="flex rounded-2xl opportunity-type text-xs font-semibold mr-4 px-2.5 py-0.5 rounded-lg cursor-pointer"
         @click="setSelectedCompanyType(opportunity.type)"
       >
         {{ opportunity.type }}

@@ -26,8 +26,14 @@
   padding: 0.5rem;
   position: absolute;
   color: black;
+  background-color: white;
   top: 35px;
   right: 18px;
+}
+
+.opportunity-type:hover {
+  color: black;
+  background-color: rgb(200, 196, 196);
 }
 
 .opportunity-category {
