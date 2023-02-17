@@ -1025,6 +1025,6 @@
     "link": "https://www.abstractapi.com/write-for-us",
     "contact": "writeforus@abstractapi.com",
     "description": "Technical content and tutorials related to the APIs in their catalog.\nOpen to other content promotion opportunities as well.",
-    "minRate": "100"
+    "maxRate": "100"
   }
 ]
