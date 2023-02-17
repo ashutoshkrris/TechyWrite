@@ -99,10 +99,12 @@
         </h3>
       </div>
       <ul class="flex opportunity-category flex-wrap justify-content-end">
-        <li v-for="i in opportunity.categories" v-bind:key="i">
+        <li v-for="category in opportunity.categories" v-bind:key="category">
           <span
-            class="bg-green-900 text-green-100 text-xs font-semibold mr-2 px-2.5 py-0.5 dark:bg-green-700 dark:text-green-100 flex rounded-lg mt-2"
-            >{{ i }}</span
+            class="bg-green-900 text-green-100 hover:bg-green-900 text-xs font-semibold mr-2 px-2.5 py-0.5 dark:bg-green-700 dark:text-green-100 flex rounded-lg mt-2"
+            style="cursor: pointer"
+            @click="setSearchTerm(category)"
+            >{{ category }}</span
           >
         </li>
       </ul>
@@ -117,6 +119,11 @@ export default {
     opportunity: {
       type: Object,
       required: true,
+    },
+  },
+  methods: {
+    setSearchTerm(category) {
+      this.$emit("searchTerm", category);
     },
   },
 };

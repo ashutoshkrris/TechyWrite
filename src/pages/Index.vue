@@ -79,7 +79,7 @@ import Footer from "../components/Footer.vue";
           :key="opportunity.name"
           class="p-3 w-full h-full"
         >
-          <Opportunity :opportunity="opportunity" />
+          <Opportunity :opportunity="opportunity" @searchTerm="getSearchTerm"/>
         </li>
       </ul>
 
@@ -148,6 +148,9 @@ export default {
   methods: {
     setPageNumber(value) {
       this.page = value;
+    },
+    getSearchTerm(value) {
+      this.searchTerm = value;
     },
   },
   computed: {
