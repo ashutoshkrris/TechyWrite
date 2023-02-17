@@ -5,7 +5,8 @@
       style="position: relative"
     >
       <h2
-        class="flex rounded-2xl opportunity-type text-xs font-semibold mr-4 px-2.5 py-0.5 dark:bg-green-700 dark:text-green-100 rounded-lg"
+        class="flex rounded-2xl opportunity-type text-xs font-semibold mr-4 px-2.5 py-0.5 dark:bg-white dark:text-green-100 rounded-lg hover:bg-opacity-60 cursor-pointer"
+        @click="setSelectedCompanyType(opportunity.type)"
       >
         {{ opportunity.type }}
       </h2>
@@ -101,8 +102,7 @@
       <ul class="flex opportunity-category flex-wrap justify-content-end">
         <li v-for="category in opportunity.categories" v-bind:key="category">
           <span
-            class="bg-green-900 text-green-100 hover:bg-green-900 text-xs font-semibold mr-2 px-2.5 py-0.5 dark:bg-green-700 dark:text-green-100 flex rounded-lg mt-2"
-            style="cursor: pointer"
+            class="bg-green-900 text-green-100 hover:bg-green-900 text-xs font-semibold mr-2 px-2.5 py-0.5 dark:bg-green-700 dark:text-green-100 flex rounded-lg mt-2 cursor-pointer"
             @click="setSearchTerm(category)"
             >{{ category }}</span
           >
@@ -124,6 +124,9 @@ export default {
   methods: {
     setSearchTerm(category) {
       this.$emit("searchTerm", category);
+    },
+    setSelectedCompanyType(type) {
+      this.$emit("selectedCompanyType", type);
     },
   },
 };

@@ -79,7 +79,7 @@ import Footer from "../components/Footer.vue";
           :key="opportunity.name"
           class="p-3 w-full h-full"
         >
-          <Opportunity :opportunity="opportunity" @searchTerm="getSearchTerm"/>
+          <Opportunity :opportunity="opportunity" @searchTerm="getSearchTerm" @selectedCompanyType="getSelectedCompanyType"/>
         </li>
       </ul>
 
@@ -151,6 +151,9 @@ export default {
     },
     getSearchTerm(value) {
       this.searchTerm = value;
+    },
+    getSelectedCompanyType(value) {
+      this.selectedCompanyType = value;
     },
   },
   computed: {
