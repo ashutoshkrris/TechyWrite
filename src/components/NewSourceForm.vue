@@ -222,13 +222,29 @@ export default {
 
       document.getElementById("submitBtn").innerHTML = "Submitting";
 
-      // Remove all fields with empty values
-      this.formData = Object.entries(this.formData)
-        .filter(([key, value]) => value)
-        .reduce((obj, [key, value]) => {
-          obj[key] = value;
-          return obj;
-        }, {});
+      for (const key in this.formData) {
+        if (this.formData.hasOwnProperty(key)) {
+          if (
+            key === "contact" ||
+            key === "minRate" ||
+            key === "maxRate" ||
+            key === "royaltyRate" ||
+            key === "hourlyMinRate" ||
+            key === "hourlyMaxRate"
+          ) {
+            if (this.formData[key] === "") {
+              delete this.formData[key];
+            }
+          }
+        }
+      }
+
+      // Split the category string by commas
+      if (this.formData.categories !== "") {
+        this.formData.categories = this.formData.categories.split(",").map((category) => category.trim());
+      } else {
+        this.formData.categories = []
+      }
 
       const data = {
         formData: this.formData,
