@@ -593,12 +593,12 @@
     "description": "Aricles must relate to Alan AI platform."
   },
   {
-    "name": "Ambassador Labs",
+    "name": "Ambassador",
     "type": "Publication",
-    "link": "https://www.getambassador.io/write-for-us/?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
-    "categories": ["Kubernetes", "Open Source"],
-    "maxRate": 300,
-    "description": ""
+    "link": "https://www.getambassador.io/write-for-us?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
+    "categories": ["Kubernetes", "Cloud Native"],
+    "description": "Looking for technical tutorials, guides, opinions, and case studies on Kubernetes and open-source cloud-native technologies.",
+    "maxRate": "300"
   },
   {
     "name": "Airbyte",
@@ -942,19 +942,9 @@
     "categories": ["Science", "Biotech", "Pharmaceutical"]
   },
   {
-    "name": "TransactionLink",
-    "link": "https://transactionlink.io",
-    "type": "Publication",
-    "contact": "hello@transactionlink.io",
-    "categories": ["Back-End Development", "DevOps", "Infrastructure"],
-    "minRate": 300,
-    "maxRate": 500,
-    "description": ""
-  },
-  {
     "name": "NimbleBox.ai",
     "type": "Publication",
-    "link": "https://nimblebox.ai/technical-writer-program",
+    "link": "https://nimblebox.ai/technical-writer-program?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
     "contact": "rugman@nimblebox.ai",
     "categories": ["Machine Learning", "Data Science", "MLOps"],
     "maxRate": "50",
@@ -963,17 +953,17 @@
   {
     "name": "Novu",
     "type": "Publication",
-    "link": "https://handbook.novu.co/write-for-us",
+    "link": "https://handbook.novu.co/write-for-us?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
     "contact": "sumit@novu.co",
     "categories": ["Open Source", "Notifications", "Front-End Development"],
     "minRate": "100",
     "maxRate": "200",
-    "description": "Novu is a constantly growing open-source platform that is built by developers for developers. By writing for Novu, not only can you get more attention to your content but also make some money on the side. It’s a win-win!"
+    "description": "Novu is a constantly growing open-source platform that is built by developers for developers. By writing for Novu, not only can you get more attention to your content but also make some money on the side. It's a win-win!"
   },
   {
     "name": "Nyckel",
     "type": "Publication",
-    "link": "https://www.nyckel.com/blog/",
+    "link": "https://www.nyckel.com/blog?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
     "contact": "writers@nyckel.com",
     "categories": ["Machine Learning", "Data Science"],
     "maxRate": 400,
@@ -982,7 +972,7 @@
   {
     "name": "Ant Media",
     "type": "Publication",
-    "link": "https://antmedia.io/write-for-us-looking-for-technical-authors/",
+    "link": "https://antmedia.io/write-for-us-looking-for-technical-authors?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
     "categories": ["Infrastructure", "APIs"],
     "minRate": 50,
     "maxRate": 150
@@ -990,21 +980,21 @@
   {
     "name": "Open Relay",
     "type": "Publication",
-    "link": "https://medium.com/stackanatomy/write-for-us-ad11489bd7c3",
+    "link": "https://medium.com/stackanatomy/write-for-us-ad11489bd7c3?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
     "categories": ["Front-End Development"],
     "maxRate": 250
   },
   {
     "name": "Storyblok",
     "type": "Publication",
-    "link": "https://www.storyblok.com/tp/guest-writing-terms",
+    "link": "https://www.storyblok.com/tp/guest-writing-terms?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
     "categories": ["Front-End Development", "Infrastructure"],
     "maxRate": 200
   },
   {
     "name": "Dolby.io",
     "type": "Publication",
-    "link": "https://go.dolby.io/community-writing",
+    "link": "https://go.dolby.io/community-writing?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
     "categories": ["Full-Stack Development", "APIs"],
     "minRate": 100,
     "maxRate": 500,
@@ -1013,8 +1003,14 @@
   {
     "name": "Semaphore",
     "type": "Publication",
-    "link": "https://semaphoreci.com/resources/write-with-us",
-    "categories": ["Development News", "DevSecOps", "Continuous Delivery", "Software Architecture", "Culture"],
+    "link": "https://semaphoreci.com/resources/write-with-us?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
+    "categories": [
+      "Development News",
+      "DevSecOps",
+      "Continuous Delivery",
+      "Software Architecture",
+      "Culture"
+    ],
     "minRate": 100,
     "maxRate": 500,
     "description": "Submit your title idea, an outline of your article, and a writing sample that showcases your ability to explain your technical knowledge to others. Most new articles are paid out at $400. Complex tutorials may be paid out at up to $500. Updates for existing tutorials, such as new version changes, are typically paid out at $100 to $200, based on the number of changes."
@@ -1022,10 +1018,20 @@
   {
     "name": "Abstract API",
     "type": "Publication",
-    "link": "https://www.abstractapi.com/write-for-us",
+    "link": "https://www.abstractapi.com/write-for-us?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
     "contact": "writeforus@abstractapi.com",
     "description": "Technical content and tutorials related to the APIs in their catalog.\nOpen to other content promotion opportunities as well.",
     "maxRate": "100",
     "categories": []
+  },
+  {
+    "name": "Baeldung",
+    "type": "Publication",
+    "link": "https://www.baeldung.com/contribution-guidelines?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
+    "contact": "hiring@baeldung.com",
+    "categories": ["Java", "Linux", "CS", "Kotlin", "Scala"],
+    "description": "Baeldung is a technical site focused mainly on the Java ecosystem, but also Kotlin, Scala, Linux, and general Computer Science - with a reach of about 10M page views per month.",
+    "minRate": "40",
+    "maxRate": "150"
   }
 ]
