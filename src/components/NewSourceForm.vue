@@ -241,10 +241,17 @@ export default {
 
       // Split the category string by commas
       if (this.formData.categories !== "") {
-        this.formData.categories = this.formData.categories.split(",").map((category) => category.trim());
+        this.formData.categories = this.formData.categories
+          .split(",")
+          .map((category) => category.trim());
       } else {
-        this.formData.categories = []
+        this.formData.categories = [];
       }
+
+      // Append to the link
+      let referrer =
+        "?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in";
+      this.formData.link = this.formData.link.concat(referrer);
 
       const data = {
         formData: this.formData,
