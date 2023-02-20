@@ -4,7 +4,7 @@
       <div class="text-white">
         <label>Company Name</label> <br />
         <input
-          v-model="formData.companyName"
+          v-model="formData.name"
           class="px-4 py-2 mt-2 mb-4 bg-gray-800 text-gray-300 outline-none rounded w-full -mr-[4.5rem] focus:ring focus:ring-psybeam/80"
           required
         />
@@ -13,7 +13,7 @@
       <div class="text-white">
         <label>Company Type</label> <br />
         <select
-          v-model="formData.companyType"
+          v-model="formData.type"
           class="px-4 py-2 mt-2 mb-4 bg-gray-800 text-gray-300 outline-none rounded w-full -mr-[4.5rem] focus:ring focus:ring-psybeam/80"
           required
         >
@@ -51,7 +51,7 @@
       <div class="text-white">
         <label>Editor's Email</label> <br />
         <input
-          v-model="formData.editorEmail"
+          v-model="formData.contact"
           class="px-4 py-2 mt-2 mb-4 bg-gray-800 text-gray-300 outline-none rounded w-full -mr-[4.5rem] focus:ring focus:ring-psybeam/80"
           type="email"
         />
@@ -64,7 +64,7 @@
       <div class="text-white">
         <label>Topic(s)</label><br />
         <input
-          v-model="formData.topics"
+          v-model="formData.categories"
           class="px-4 py-2 mt-2 mb-4 bg-gray-800 text-gray-300 outline-none rounded w-full -mr-[4.5rem] focus:ring focus:ring-psybeam/80"
         />
         <p class="text-sm text-gray-500">
@@ -73,7 +73,7 @@
         </p>
       </div>
       <br />
-      <div v-if="formData.companyType === 'Publication'">
+      <div v-if="formData.type === 'Publication'">
         <div class="flex mb-4">
           <div class="text-white w-1/2 mr-4">
             <label>Minimum Rate</label><br />
@@ -109,7 +109,7 @@
         </p>
         <br />
       </div>
-      <div v-else-if="formData.companyType === 'Publisher'">
+      <div v-else-if="formData.type === 'Publisher'">
         <div class="text-white">
           <label for=""> Royalty Rate<br /></label>
           <input
@@ -160,7 +160,7 @@
       <div class="text-white">
         <label>Notes(Description)</label><br />
         <textarea
-          v-model="formData.notes"
+          v-model="formData.description"
           class="px-4 py-2 mt-2 mb-4 bg-gray-800 text-gray-300 outline-none rounded w-full -mr-[4.5rem] focus:ring focus:ring-psybeam/80"
           rows="6"
         ></textarea>
@@ -187,12 +187,12 @@ export default {
   data() {
     return {
       formData: {
-        companyName: "",
-        companyType: "Publication",
+        name: "",
+        type: "Publication",
         link: "",
-        editorEmail: "",
-        topics: "",
-        notes: "",
+        contact: "",
+        categories: "",
+        description: "",
         minRate: "",
         maxRate: "",
         royaltyRate: "",
@@ -233,17 +233,20 @@ export default {
       const data = {
         formData: this.formData,
       };
-      const response = await axios.post("https://github-issue-khaki.vercel.app/create-issue", data);
+      const response = await axios.post(
+        "https://github-issue-khaki.vercel.app/create-issue",
+        data
+      );
       if (response.status === 201) {
         document.getElementById("submitBtn").innerHTML = "Submit";
         alert("Form submitted successfully!");
         this.formData = {
-          companyName: "",
-          companyType: "Publication",
+          name: "",
+          type: "Publication",
           link: "",
-          editorEmail: "",
-          topics: "",
-          notes: "",
+          contact: "",
+          categories: "",
+          description: "",
           minRate: "",
           maxRate: "",
           royaltyRate: "",
