@@ -343,8 +343,8 @@
   {
     "name": "Draft.dev",
     "type": "Agency",
-    "link": "https://draft.dev/#write?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
-    "contact": "karl@draft.dev",
+    "link": "https://draft.dev/write?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
+    "contact": "hiring@draft.dev",
     "categories": ["Full-Stack Development", "Data Science", "DevOps"],
     "minRate": 315,
     "maxRate": 578,
