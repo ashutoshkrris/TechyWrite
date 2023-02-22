@@ -263,7 +263,8 @@
     "categories": ["Testing"],
     "minRate": 350,
     "maxRate": 500,
-    "description": ""
+    "description": "",
+    "contact": "writers@wonderproxy.com"
   },
   {
     "name": "Tutorialspoint",
