@@ -558,15 +558,6 @@
     "description": "Tutorials should cover building with one or more web3 technologies."
   },
   {
-    "name": "Okteto",
-    "type": "Publication",
-    "link": "https://okteto.com/tech-writer/?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
-    "contact": "writers@okteto.com",
-    "categories": ["Kubernetes"],
-    "maxRate": 200,
-    "description": "Focus on Kubernetes and Cloud-Native Applications, or application development and deployment with Okteto."
-  },
-  {
     "name": "Warrant",
     "type": "Publication",
     "link": "https://blog.warrant.dev?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
@@ -688,15 +679,6 @@
     "description": "Enlear also offers opportunities for content strategy and editorial roles."
   },
   {
-    "name": "Figment",
-    "type": "Publication",
-    "link": "https://www.notion.so/Contributing-to-Figment-Learn-d8ff9cdc32ca4b58838d81d07eab49bd?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
-    "categories": ["Crypto"],
-    "minRate": 100,
-    "maxRate": 1000,
-    "description": "Payouts range from $100 for guides to $1000 for full-stack dApp tutorials."
-  },
-  {
     "name": "MSSQL Tips",
     "type": "Publication",
     "link": "https://www.mssqltips.com/contribute/?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
@@ -770,14 +752,6 @@
     "description": ""
   },
   {
-    "name": "CodeCov",
-    "type": "Publication",
-    "link": "https://about.codecov.io/write-for-us/?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
-    "categories": ["DevOps", "Testing"],
-    "maxRate": 500,
-    "description": ""
-  },
-  {
     "name": "Earthly",
     "type": "Publication",
     "link": "https://earthly.dev/blog/write-for-us/?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
@@ -836,14 +810,6 @@
     "minRate": 150,
     "maxRate": 200,
     "description": "Seeking tutorials on Opta, pays an extra 100 dollars for Opta tutorials that hit 1000 views in 4 weeks."
-  },
-  {
-    "name": "Hevo",
-    "type": "Publication",
-    "link": "https://community.hevodata.com/write-for-hevo?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
-    "categories": ["Data Science"],
-    "maxRate": 100,
-    "description": ""
   },
   {
     "name": "Codiga",
@@ -949,16 +915,6 @@
     "categories": ["Machine Learning", "Data Science", "MLOps"],
     "maxRate": "50",
     "description": ""
-  },
-  {
-    "name": "Novu",
-    "type": "Publication",
-    "link": "https://handbook.novu.co/write-for-us?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
-    "contact": "sumit@novu.co",
-    "categories": ["Open Source", "Notifications", "Front-End Development"],
-    "minRate": "100",
-    "maxRate": "200",
-    "description": "Novu is a constantly growing open-source platform that is built by developers for developers. By writing for Novu, not only can you get more attention to your content but also make some money on the side. It's a win-win!"
   },
   {
     "name": "Nyckel",
