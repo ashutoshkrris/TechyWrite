@@ -445,15 +445,6 @@
     "description": "Accepts articles on ImageKit technologies and web image optimization."
   },
   {
-    "name": "Cube Dev",
-    "type": "Publication",
-    "link": "https://www.notion.so/Cube-js-Guest-Authors-8ddd5046be9048d9869410b60d4a2b98?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
-    "contact": "igor@cube.dev",
-    "categories": ["Data Science"],
-    "maxRate": 300,
-    "description": "Provides a list of suggested categories."
-  },
-  {
     "name": "Wizard on Demand",
     "type": "Agency",
     "link": "https://wizardondemand.com?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
@@ -990,5 +981,38 @@
     "description": "Baeldung is a technical site focused mainly on the Java ecosystem, but also Kotlin, Scala, Linux, and general Computer Science - with a reach of about 10M page views per month.",
     "minRate": "40",
     "maxRate": "150"
+  },
+  {
+    "name": "Strapi",
+    "type": "Publication",
+    "link": "https://strapi.io/write-for-the-community?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
+    "categories": ["Front-End Development", "Back-End Development", "GraphQL"],
+    "description": "This program is for Strapi enthusiasts, developers, and content managers who want to contribute to our tutorials and deep dives. Check for the topics in the FAQs section.",
+    "minRate": "100",
+    "maxRate": "350"
+  },
+  {
+    "name": "Cube.js",
+    "type": "Publication",
+    "link": "https://www.notion.so/Cube-js-Guest-Authors-8ddd5046be9048d9869410b60d4a2b98?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
+    "contact": "igor@cube.dev",
+    "categories": ["Data Science", "Analytics"],
+    "description": "Focused on content that helps developers build analytical apps from select domains - data visualization and front-end technologies and, data engineering and back-end technologies",
+    "maxRate": "300"
+  },
+  {
+    "name": "Invertase",
+    "type": "Publication",
+    "link": "https://invertase.io/authors-program?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
+    "categories": [
+      "Dart",
+      "Flutter",
+      "Firebase",
+      "Software Development",
+      "Open Source",
+      "Web Technologies"
+    ],
+    "description": "",
+    "maxRate": "250"
   }
 ]
