@@ -1014,5 +1014,13 @@
     ],
     "description": "",
     "maxRate": "250"
+  },
+  {
+    "name": "SheCanCode",
+    "type": "Publication",
+    "link": "https://www.shecancode.io/write-for-us?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
+    "categories": ["Front-End Development", "Back-End Development", "Agile"],
+    "description": "SheCanCode's community ranges from females who are experienced candidates searching for their next role to women considering a move into a tech career for the first time. Our audience predominately consists of women working in their first or second tech roles. ",
+    "maxRate": "96"
   }
 ]
