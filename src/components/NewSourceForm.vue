@@ -105,7 +105,7 @@
           <br />
         </div>
         <p class="text-sm text-gray-500">
-          Please do not include the USD($) symbol.
+          Please do not include the USD($) symbol. If the rate is fixed, then just include Maximum Rate.
         </p>
         <br />
       </div>
@@ -153,7 +153,7 @@
           <br />
         </div>
         <p class="text-sm text-gray-500">
-          Please do not include the USD($) symbol.
+          Please do not include the USD($) symbol. If the rate is fixed, then just include Hourly Maximum Rate.
         </p>
         <br />
       </div>
