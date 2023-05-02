@@ -1022,5 +1022,48 @@
     "categories": ["Front-End Development", "Back-End Development", "Agile"],
     "description": "SheCanCode's community ranges from females who are experienced candidates searching for their next role to women considering a move into a tech career for the first time. Our audience predominately consists of women working in their first or second tech roles. ",
     "maxRate": "96"
+  },
+  {
+    "name": "Giskard",
+    "type": "Publication",
+    "link": "https://www.giskard.ai/write-for-the-community?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
+    "contact": "hello@giskard.ai",
+    "categories": [
+      "Data Science",
+      "Artificial Intelligence",
+      "Machine Learning"
+    ],
+    "description": "This program is for AI Quality experts & Giskard enthusiasts who want to share their knowledge through articles & tutorials. We are looking for writers close to our users: Data Scientists, ML Engineers, and AI Product Managers.",
+    "minRate": "100",
+    "maxRate": "400"
+  },
+  {
+    "name": "Software Testing Help",
+    "type": "Publication",
+    "link": "https://www.softwaretestinghelp.com/opportunity-freelance-qa-testers/?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
+    "contact": "info@softwaretestinghelp.com",
+    "categories": ["Testing"],
+    "description": "You can work on creating tutorials on any topic that would be helpful for QA testers and earn a handsome pay.",
+    "minRate": "200",
+    "maxRate": "600"
+  },
+  {
+    "name": "Plural",
+    "type": "Publication",
+    "link": "https://www.plural.sh/blog/plurals-content-contribution-program/?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
+    "contact": "community@plural.sh",
+    "categories": ["Kubernetes", "DevOps", "Open Source"],
+    "description": "You can write on tutorials about what you built with Plural, application-specific deployment guides, and architectural comparisons of popular DevOps and Data open-source tools against each other.",
+    "maxRate": "300"
+  },
+  {
+    "name": "Code Maze",
+    "type": "Publication",
+    "link": "https://code-maze.com/write-for-codemaze/?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
+    "contact": "content@code-maze.com",
+    "categories": ["Back-End Development"],
+    "description": "There are a lot of available topics to choose from such as - .NET/C# application development, ASP.NET Core web application development, Angular in combination with ASP.NET Core backend, Best practices in web development, Security, authentication, and authorization in .NET, and much more.",
+    "minRate": "82",
+    "maxRate": "135"
   }
 ]
