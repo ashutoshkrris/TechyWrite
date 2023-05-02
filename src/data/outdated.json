@@ -42,5 +42,14 @@
     "minRate": "100",
     "maxRate": "200",
     "description": "Novu is a constantly growing open-source platform that is built by developers for developers. By writing for Novu, not only can you get more attention to your content but also make some money on the side. It's a win-win!"
+  },
+  {
+    "name": "Mattermost",
+    "type": "Publication",
+    "link": "https://handbook.mattermost.com/contributors/contributors/ways-to-contribute/community-content-program?utm_source=referral&utm_medium=aggregator&utm_campaign=techywrite.ashutoshkrris.in",
+    "categories": ["DevOps", "Full-Stack Development"],
+    "minRate": 250,
+    "maxRate": 350,
+    "description": "The docs mention that exceptionally detailed content about prevalent technologies can earn up to $500."
   }
 ]
