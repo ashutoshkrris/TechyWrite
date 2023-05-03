@@ -115,7 +115,7 @@ export default {
           break;
         }
       }
-      if (this.page >= this.totalPages) {
+      if (this.page > this.totalPages) {
         this.page = 1;
       }
 
