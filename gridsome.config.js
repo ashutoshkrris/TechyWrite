@@ -22,5 +22,11 @@ module.exports = {
         exclude: [],
       },
     },
+    {
+      use: "@gridsome/plugin-google-analytics",
+      options: {
+        id: "G-GXL60Z6WPF",
+      },
+    },
   ],
 };
