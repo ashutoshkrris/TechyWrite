@@ -11,8 +11,7 @@
     "axios": "^1.2.2",
     "body-parser": "^1.20.1",
     "gridsome": "^0.7.0",
-    "@gridsome/plugin-google-analytics"
-
+    "@gridsome/plugin-google-analytics": "^0.1.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
